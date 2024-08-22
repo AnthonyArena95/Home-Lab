@@ -164,12 +164,17 @@ The Home Lab project was created to provide a controlled environment for hands-o
   <group>syscheck</group> 
   <alert_format>json</alert_format>
   <integration>
-- Added the following configuration to the <syscheck> section of the configuration file, the path is subjective, I used "/" for all directories.
+- Added the following configuration to the <syscheck> section of the configuration file, the path is subjective, I used "/home/ant/Documents".
   ```xml
-  <directories check_all="yes" realtime="yes">/</directories>
+  <directories check_all="yes" realtime="yes">/home/ant/Documents</directories>
 - Once done, :wq to save and quit. Restarted wazuh-manager with the following command:
   ```bash
   sudo systemctl restart wazuh-manager
-- To test the integration, I went logged into the Wazuh dashboard via local IP > VirusTotal:
+  ```
+- I downloaded the Eicar file which is a safe malicious file meant to be used for testing:
+  ```bash
+  sudo curl -Lo /home/ant/Documents/suspicious-file.exe https://secure.eicar.org/eicar.com
+- To test the integration, I logged into the Wazuh dashboard via local IP > VirusTotal:
 
-  ![Photos_UEkH4VxIKN](https://github.com/user-attachments/assets/59c1d03f-cd78-4dbf-a006-28b474dc6254)
+  ![chrome_Utpnfy2SlJ](https://github.com/user-attachments/assets/ed4ca871-9fbf-4ede-aa57-8bf0fd13b91e)
+
