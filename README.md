@@ -18,7 +18,7 @@ The Home Lab project was created to provide a controlled environment for hands-o
 - VirtualBox - A Virtualization software that allows uers to create and run virtual machines
 - Wazuh - A Security Information and Event Management (SIEM) system for log ingestion and analysis
 - Suricata - An Intrusion Detection system (IDS) and Intrusion Prevention System (IPS) to detect and monitor networks for suspicious activity
-- Virus Total - An online service that analyzes files, URLs, domains, and IP Addresses to detect malware and other threats
+- VirusTotal - An online service that analyzes files, URLs, domains, and IP Addresses to detect malware and other threats
 
 ## Steps
 
@@ -151,7 +151,7 @@ The Home Lab project was created to provide a controlled environment for hands-o
 
   ![WINWORD_ZSw5JUKPoH](https://github.com/user-attachments/assets/61a45470-9980-4513-949b-cd17c01c997c)
 
-#### <ins>Integrating Virus Total
+#### <ins>Integrating VirusTotal
 - Opened the configuration file /var/ossec/etc/ossec.conf on the Wazuh server with the following command:
   ```bash
   sudo vim /var/ossec/etc/ossec.conf
@@ -160,7 +160,7 @@ The Home Lab project was created to provide a controlled environment for hands-o
   ```xml
   <integration>
   <name>virustotal</name>
-  <api_key> Log into virus total to obtain API key </api_key>
+  <api_key> Log into virustotal to obtain API key </api_key>
   <group>syscheck</group> 
   <alert_format>json</alert_format>
   <integration>
