@@ -141,7 +141,7 @@ The Home Lab project was created to provide a controlled environment for hands-o
   ```
 - In a separate terminal, the following command was ran:
   ```bash
-  sudo tail -f /var/log/suricata/eve.json | jq ‘select<.event_type==”alert”)’
+  sudo tail -f /var/log/suricata/eve.json | jq 'select(.event_type=="alert")'
   ```
 - Received output:
   ```bash
